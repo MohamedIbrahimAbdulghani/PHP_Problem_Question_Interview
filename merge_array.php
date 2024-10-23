@@ -1,9 +1,12 @@
 <?php
 
 
+// echo "<pre>";
+// print_r(array_merge(["1", "2"], ["one", "two"]));
 
 
-// print_r(array_merge($array1, $array2));
+
+/******   this is function to implement array_merge */
 
 function arrayMerge($array1, $array2) {
     $result = [];
@@ -11,10 +14,9 @@ function arrayMerge($array1, $array2) {
         $result[] = $array1[$i];
     endfor;
     for($y = 0; $y < count($array2); $y++):
-        $result[] .= $array2[$y];
+        $result[] = $array2[$y];
     endfor;
     return $result;
 }
-
 echo "<pre>";
 print_r(arrayMerge([1, 2], ["one", "two"])) ;
